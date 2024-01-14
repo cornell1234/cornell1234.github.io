@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    padding:12px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+nav {
+    width: 30%;
+    float: right;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+nav li {
+    float:right;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 40px;
+    transition: background-color 0.3s color 0.3s;
+}
+
+
+nav li a:hover {
+    background-color: #4CAF50;
+    color:black;
+}
+ 
+@media only screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        float: none;
+    }
+
+    nav ul {
+        display: none;
+        transition: display 0.3s ease-in-out; /*Add smooth transition effect */
+    }
+
+    nav.show ul {
+        display: block;
+    }
+
+    nav li {
+        float:none;
+        text-align: center;
+    }
+
+    nav li a {
+        display: block;
+        padding: 14px 16px;
+    }
+
+    nav.icon {
+        display:block;
+        float:right;
+    }
+
+}
+.background-section {
+    position: relative;
+    background-image: url('img/background.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+.buttons-section {
+    text-align: center;
+    margin-top: 3cm;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    margin: 3cm;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.women-button {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.men-button {
+    background-color: #0000FF;
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+.items-section {
+    display: flex;
+    flex-wrap:wrap;
+    margin: 20px auto;
+}
+
+.Category {
+    width: 100%; /* Adjuct the width to create a grid of 2/2*/
+    margin-bottom: 30px;
+}
+
+
+.Category h3 {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+}
+
+.item {
+    width: calc(50% - 20px); /*Two items per row */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 50%;
+    height:auto;
+}
+
+@media (max-width: 768px) {
+    .category {
+        width: calc(50% - 20px); /*half width for larger screens*/
+    }
+
+    .item {
+        width: calc(33.33% - 20px); /*Three items per row for larger screens*/
+    }
+}
+
+footer {
+    background-color:#333;
+    color: white;
+    padding: 20px; 
+    text-align:center;
+}
+
+.contact-buttons a {
+    margin-right: 10px;
+}
+
+.contact-buttons img {
+    width: 30px;
+    height: 30px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+

@@ -1,5 +1,10 @@
 body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    margin-bottom: 20px;
+    background-color: lightblue;
 }
 
 header {
@@ -24,16 +29,15 @@ nav {
     background-color: transparent;
 }
 
-nav ol {
+nav ul {
     list-style-type:none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-
+    display: flex;
 }
 
 nav li {
-    float:right;
+    margin-right: 15px;
 }
 
 nav li a {
@@ -59,12 +63,12 @@ nav li a:hover {
         float: none;
     }
 
-    nav ol {
+    nav ul {
         display: none;
         transition: display 0.3s ease-in-out; /*Add smooth transition effect */
     }
 
-    nav.show ol {
+    nav.show ul {
         display: block;
     }
 
@@ -165,37 +169,50 @@ nav li a:hover {
         width: calc(33.33% - 20px); /*Three items per row for larger screens*/
     }
 }
-.get-in-touch-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border:none;
-    border-radius: 5px;
-    font-size: 16px;
+
+#contactForm {
+    display: none;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: lightgreen;
 }
 
-.get-in-touch-button:hover {
-    background-color: #45a049;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4CAF50;
 }
 
 footer {
     background-color:#333;
     color: white;
     padding: 20px; 
-    text-align:center;
+    margin-top: auto;
+    text-align: center;
 }
 
-.contact-buttons a {
-    margin-right: 10px;
-}
 
-.contact-buttons img {
-    width: 30px;
-    height: 30px;
-}
-
-footer p {
-    margin-top: 10px;
-}
 
 

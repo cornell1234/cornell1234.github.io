@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js/script.js" defer></script>
 </head>
 <body>
 
@@ -15,22 +17,46 @@
 
         <nav>
 	        <ul>
-	            <li><a href="#home">Home</a></li>
-	            <li><a href="#about">About</a></li>
-	            <li><a href="#contact">Contact</a></li>
+	            <li><a href="/">Home</a></li>
+	            <li><a href="/about">About Us</a></li>
+	            <li><a href="#" onclick="openForm(contactForm)">Contact</a></li>
 	        </ul>
-           <!---- <div class="'icon">&#9776;</div> hamburger icon
+           <div class="'icon">&#9776;</div>
         </nav>
-        <script src="script.js"></script> -->
 
     </header>
 
     <main>
-        <section>
-            <h1>Contact Us</h1>
-            <p>Welcome to Elegant Perfumes</p>
-            <button class="'get-in-touch-button">Get In Touch</button>
+        <section class="background-section">
+            <h1>Get in touch</h1>
+    
+            <p>Feel free to reach out to us for any inquries or questions.</p>
+
+            <div id="contactForm" style="display:none;">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" email="email" required><br>
+
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="text" id="phone-number" name="phone-number"><br>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" cols="30" rows="5" required></textarea><br>
+
+                    <input type="submit" value="Submit"> <br>
+                </form>
+            </div>
+
+            <script>
+                function openForm() {
+                    document.getElementById("contactForm").style.display = "block"; 
+                }
+            </script>
         </section>
+    
     </main>
 
     <footer>

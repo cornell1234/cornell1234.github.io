@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }); 
 });
 
-document.getElementById('scrollToParagraph').addEventListener('click', function () {
+document.getElementById('scrollParagraph').addEventListener('click', function () {
     document.getElementById('targetParagraph').scrollIntoView({
         behavior: 'smooth'
     });

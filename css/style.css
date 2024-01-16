@@ -103,25 +103,13 @@ nav li a:hover {
     margin: 0;
 }
 
-.background-section .image::before {
+.background-section .image {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.5);
 }
-
-.background-section .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    z-index:1;
-}
-
 
 .buttons-section {
     text-align: center;
@@ -130,7 +118,7 @@ nav li a:hover {
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: darkgreen;
     color: white;
     text-decoration: none;
     border-radius: 40px;
@@ -149,7 +137,7 @@ nav li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #4CAF50;
+    background-color: darkgreen;
     color: black;
 }
 .items-section {
@@ -165,25 +153,23 @@ nav li a:hover {
 
 
 .Category h3 {
-    text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
     margin: 0;
 }
 
-.item {
-    width: calc(50% - 20px); /*Two items per row */
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 10px;
+.image-description {
+    font-size: 16px;
+    color: #555;
 }
 
-.item img {
-    width: 50%;
-    height:auto;
+.image-price {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 8px;
 }
-
 @media (max-width: 768px) {
     .category {
         width: calc(50% - 20px); /*half width for larger screens*/
@@ -200,28 +186,36 @@ nav li a:hover {
 
 .nav-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color:white;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
     text-decoration: none;
+    background-color: #333;
+    color: #fff;
     border-radius: 40px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-button:hover {
-    background-color: #4CAF50;
+    background-color: darkgreen;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 #contactForm {
-    display: none;
+    display: block;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto 0; /*Adjust margin to reduce space from the top */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #contactForm label {
@@ -255,7 +249,7 @@ nav li a:hover {
 }
 
 #contactForm input[type="submit"]:hover {
-    background-color: #4CAF50;
+    background-color: darkgreen;
 }
 
 #closeContactForm {
@@ -284,7 +278,7 @@ nav li a:hover {
 }
 
 .input[type="submit"]:hover {
-    background-color: #4CAF50;
+    background-color: darkgreen;
 }
 
 #scrollParagraph{
@@ -297,11 +291,39 @@ nav li a:hover {
     background-color: #333;
     color: #fff;
     border-radius: 40px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: background-color 0.3s, color 0.3s;
 }
 
 #scrollParagraph:hover {
-    background-color: #4CAF50;
+    background-color: darkgreen;
+}
+
+#ParagraphSection {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#ParagraphSection h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#ParagraphSection p {
+    color:#555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 footer {

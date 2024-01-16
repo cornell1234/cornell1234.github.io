@@ -1,13 +1,30 @@
-document.addEventListener("DOMContentLoaded", function (){
-    const icon = document.querySelector(".icon");
-    const navList = document.querySelector("nav ul");
+document.addEventListener('DOMContentLoaded', function() {
 
-    //Toggle the navigation menu when the hamburger icon is clicked
-    icon.addEventListener("click", function () {
-        navList.classList.toggle("show");
+    const openContactButton = document.querySelector('.nav-button');
+    const contactForm = document.getElementById('contactForm');
+
+
+   openContactButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        contactForm.style.display = (contactFormSection.style.display == 'block') ? 'none' : 'block';
+        
+        document.getElementById('contactFormSection').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }); 
+});
+
+document.getElementById('scrollToParagraph').addEventListener('click', function () {
+    document.getElementById('targetParagraph').scrollIntoView({
+        behavior: 'smooth'
     });
 });
 
-function openForm() {
-    document.getElementById("contactForm").style.display = "block";
-}
+document.querySelector('nav li a').addEventListener('click', function(event) {
+    event.preventDefault();
+});
+
+document.querySelector('#home-link').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});

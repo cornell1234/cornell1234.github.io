@@ -111,35 +111,41 @@ nav li a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.buttons-section {
-    text-align: center;
-    margin-top: 3cm;
-}
-.cta-button {
+#womanButton { /*The scrrollToSection btn*/
     display: inline-block;
     padding: 10px 20px;
-    background-color: darkgreen;
+    background-color: #FF69B4;
     color: white;
     text-decoration: none;
     border-radius: 40px;
-    margin: 3cm;
+    margin: 10px;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.women-button {
-    background-color: #FF69B4;
-    color: white;
+#womenButton:hover {
+    background-color: #4CAF50;
+    color: black;
 }
 
-.men-button {
+#menButton { /*The scrrollToSection btn*/
     background-color: #0000FF;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF69B4;
     color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: darkgreen;
+    background-color: #4CAF50;
     color: black;
 }
+
 .items-section {
     display: flex;
     flex-wrap:wrap;
@@ -159,16 +165,34 @@ nav li a:hover {
     margin: 0;
 }
 
-.image-description {
-    font-size: 16px;
-    color: #555;
+.grid-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; /*Adjust the margin between items */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px; /* set a fixed height for all grid items */
 }
 
-.image-price {
-    font-size: 18px;
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure all images maintain aspect ratio and cover the container */
+}
+
+.grid-item .image-description {
+    font-size: 16px;
+    color: #555;
+    padding: 10px;
+}
+
+.grid-item .image-price {
+    font-size: 16px;
     color: #333;
     font-weight: bold;
     margin-top: 8px;
+    padding: 10px;
 }
 @media (max-width: 768px) {
     .category {

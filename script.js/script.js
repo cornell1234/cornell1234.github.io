@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const reviewsContainer = document.getElementById('reviews-container');
+   const reviewsContainer = document.getElementById('reviews-container');
     
-    // Automatically create the review form on page load
+    //Automatically create the review form on page load
     createReviewForm();
 
     function createReviewForm() {
